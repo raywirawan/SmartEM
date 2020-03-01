@@ -6,12 +6,13 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     app:cardElevation="4dp"
+    app:cardCornerRadius="10dp"
     android:layout_marginVertical="@dimen/activity_vertical_margin"
     android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
         >
         <TextView
             android:id="@+id/lastupdate"
@@ -19,16 +20,18 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
             android:text="Last Updated : "
+            android:textSize="11sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="11sp"
             app:layout_constraintStart_toEndOf="@id/lastupdate"
             app:layout_constraintTop_toTopOf="@id/lastupdate"
             android:text="01-03-2020 14:39:00"/>
         <TextView
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="0dp"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:id="@+id/item_tv_voltage"
             android:layout_width="wrap_content"
@@ -40,6 +43,15 @@
             android:textSize="30sp"
             />
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:text="v"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/item_tv_voltage"
+            app:layout_constraintBottom_toBottomOf="@id/item_tv_voltage"/>
+        <TextView
             android:id="@+id/item_tv_current"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,9 +62,19 @@
             android:textSize="30sp"
             />
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:text="A"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/item_tv_current"
+            app:layout_constraintBottom_toBottomOf="@id/item_tv_current"/>
+        <TextView
             android:id="@+id/voltage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="11sp"
             android:text="Voltage"
             app:layout_constraintTop_toBottomOf="@id/item_tv_voltage"
             app:layout_constraintStart_toStartOf="@id/item_tv_voltage"/>
@@ -60,6 +82,7 @@
             android:id="@+id/current"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="11sp"
             android:text="Current"
             app:layout_constraintTop_toBottomOf="@id/item_tv_current"
             app:layout_constraintStart_toStartOf="@id/item_tv_current"/>
@@ -74,6 +97,15 @@
             android:textSize="30sp"
             />
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:text="W"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/item_tv_apppower"
+            app:layout_constraintBottom_toBottomOf="@id/item_tv_apppower"/>
+        <TextView
             android:id="@+id/item_tv_realpower"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -83,9 +115,19 @@
             android:textSize="30sp"
             />
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:text="W"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/item_tv_realpower"
+            app:layout_constraintBottom_toBottomOf="@id/item_tv_realpower"/>
+        <TextView
             android:id="@+id/apppower"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="11sp"
             android:text="App Power"
             app:layout_constraintTop_toBottomOf="@id/item_tv_apppower"
             app:layout_constraintStart_toStartOf="@id/item_tv_apppower"/>
@@ -93,6 +135,7 @@
             android:id="@+id/realpower"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="11sp"
             android:text="Real Power"
             app:layout_constraintTop_toBottomOf="@id/item_tv_realpower"
             app:layout_constraintStart_toStartOf="@id/item_tv_realpower"/>
