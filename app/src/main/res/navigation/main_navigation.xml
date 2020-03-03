@@ -9,5 +9,23 @@
         android:id="@+id/homeFragment"
         android:name="com.iotproject.smartem.fragment.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_connectFragment2"
+            app:destination="@id/connectFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+        <argument
+            android:name="deviceCode"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/connectFragment"
+        android:name="com.iotproject.smartem.fragment.ConnectFragment"
+        android:label="fragment_connect"
+        tools:layout="@layout/fragment_connect" >
+        <action
+            android:id="@+id/action_connectFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>
