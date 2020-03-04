@@ -14,7 +14,7 @@
         android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_top_margin"
         android:text="Smart Energy Manager"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorBackground"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
@@ -58,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
-            android:text="219"
+            android:text="----"
             android:textColor="@android:color/black"
             android:textSize="40sp"
             app:layout_constraintEnd_toStartOf="@id/tegangan_satuan"
@@ -106,7 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
-            android:text="8.35"
+            android:text="----"
             android:textColor="@android:color/black"
             android:textSize="40sp"
             app:layout_constraintEnd_toStartOf="@id/arus_satuan"
@@ -153,7 +153,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
-            android:text="1828.65"
+            android:text="----"
             android:textColor="@android:color/black"
             android:textSize="40sp"
             app:layout_constraintEnd_toStartOf="@id/daya_satuan"
@@ -200,7 +200,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
-            android:text="21"
+            android:text="----"
             android:textColor="@android:color/black"
             android:textSize="40sp"
             app:layout_constraintEnd_toStartOf="@id/energi_satuan"
@@ -242,5 +242,18 @@
         android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
         app:layout_constraintStart_toStartOf="@id/btn_disconnect"
         app:layout_constraintTop_toBottomOf="@id/btn_disconnect"/>
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        app:layout_constraintTop_toBottomOf="@id/btn_connect"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/colorBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/activity_top_margin"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Anda belum menghubungkan perangkat, silahkan klik tombol diatas"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
